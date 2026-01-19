@@ -19,7 +19,7 @@ Key Features:
     - Low temperature for consistent scoring
 
 Usage:
-    from app.rag.chain import get_rag_chain
+    from safetravels.rag.chain import get_rag_chain
     
     chain = get_rag_chain()
     result = chain.assess_risk(32.7767, -96.7970, commodity="electronics")
@@ -34,8 +34,8 @@ import json
 import os
 import logging
 
-from app.config import settings
-from app.rag.vector_store import get_vector_store
+from safetravels.core.app_settings import settings
+from safetravels.rag.vector_store import get_vector_store
 
 # =============================================================================
 # CONFIGURATION
@@ -58,7 +58,7 @@ DEFAULT_RETRIEVAL_COUNT = 5
 
 # Try to import OpenAI client
 try:
-    from openai import OpenAI
+    from openai import OpenAI, AzureOpenAI
     OPENAI_AVAILABLE = True
 except ImportError:
     OPENAI_AVAILABLE = False
@@ -196,7 +196,16 @@ class RAGChain:
         if not OPENAI_AVAILABLE:
             return None
         
-        # Try settings first, then environment variable
+        # Check for Azure OpenAI credentials
+        if settings.azure_openai_api_key and settings.azure_openai_endpoint:
+            logger.info("Initializing Azure OpenAI Client")
+            return AzureOpenAI(
+                api_key=settings.azure_openai_api_key,
+                api_version=settings.azure_openai_api_version,
+                azure_endpoint=settings.azure_openai_endpoint,
+            )
+
+        # Fallback to standard OpenAI
         api_key = settings.openai_api_key or os.getenv("OPENAI_API_KEY")
         
         if api_key:
@@ -248,7 +257,7 @@ class RAGChain:
         
         try:
             response = self.client.chat.completions.create(
-                model=settings.llm_model,
+                model=settings.azure_deployment_name if isinstance(self.client, AzureOpenAI) else settings.llm_model,
                 messages=[
                     {
                         "role": "system",

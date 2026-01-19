@@ -21,7 +21,7 @@ Environment Variables:
     DATABASE_URL: Optional database connection string
 
 Usage:
-    from app.config import settings
+    from safetravels.core.app_settings import settings
     
     api_key = settings.openai_api_key
     model = settings.llm_model
@@ -58,7 +58,7 @@ class Settings(BaseSettings):
         retrieval_k: Number of documents to retrieve per query
         
     Example:
-        >>> from app.config import settings
+        >>> from safetravels.core.config import settings
         >>> print(settings.app_name)
         'SafeTravels API'
         >>> print(settings.llm_model)
@@ -91,6 +91,33 @@ class Settings(BaseSettings):
     
     llm_model: str = "gpt-4o-mini"
     """OpenAI model to use. Options: gpt-4o-mini, gpt-4o, gpt-4-turbo."""
+
+    azure_openai_api_key: Optional[str] = None
+    """Azure OpenAI API Key (if using Azure)."""
+
+    azure_openai_endpoint: Optional[str] = None
+    """Azure OpenAI Endpoint URL (e.g., https://my-resource.openai.azure.com/)."""
+
+    azure_openai_api_version: str = "2023-12-01-preview"
+    """Azure OpenAI API Version."""
+
+    azure_deployment_name: Optional[str] = None
+    """Azure OpenAI Deployment Name (required if using Azure)."""
+    
+    azure_openai_deployment: Optional[str] = None
+    """Azure OpenAI Deployment Name (alternate name)."""
+    
+    # -------------------------------------------------------------------------
+    # Google Maps Configuration
+    # -------------------------------------------------------------------------
+    google_maps_api_key: Optional[str] = None
+    """Google Maps API Key for routes, places, geocoding."""
+    
+    # -------------------------------------------------------------------------
+    # Logging
+    # -------------------------------------------------------------------------
+    log_level: str = "INFO"
+    """Logging level: DEBUG, INFO, WARNING, ERROR."""
     
     # -------------------------------------------------------------------------
     # Embedding Configuration

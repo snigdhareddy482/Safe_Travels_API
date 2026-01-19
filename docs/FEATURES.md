@@ -413,6 +413,26 @@ Response: "Este estacionamiento tiene riesgo moderado. Ha habido 2 incidentes en
 
 ---
 
+---
+
+### 16. Model Context Protocol (MCP) Server
+
+**What it does:**  
+Exposes SafeTravels tools directly to AI assistants like Claude Desktop, Cursor, or other LLMs. This allows users to use generic AI interfaces to perform specific cargo safety tasks.
+
+**Available Tools:**
+- `assess_location_risk`: Comprehensive scoring
+- `find_safe_stops_nearby`: Real-time parking search
+- `analyze_route`: Complete route scanning
+- `check_recent_incidents`: Direct query of incident database
+
+**Example Usage in Claude:**
+> "I'm driving a truck with electronics to Dallas. Is it safe to park at the Pilot on I-20?"
+> 
+> *Claude uses `assess_location_risk` tool behind the scenes and answers using SafeTravels data.*
+
+---
+
 ## 📡 API Endpoints Summary
 
 | Endpoint | Method | Description |

@@ -44,17 +44,24 @@ LLM synthesizes: "Moderate risk. 2 incidents in past 6 months.
 
 ## 🏗️ Architecture
 
-```
-User Query → Embed → ChromaDB → LLM → Risk Assessment
+```mermaid
+graph TD
+    User -->|API/MCP| Agents
+    Agents -->|Plan| Planner
+    Agents -->|Analyze| Analyst
+    Agents -->|Review| Critic
+    Agents -->|Query| RAG
+    RAG --> ChromaDB
 ```
 
 | Component | Technology |
 |-----------|------------|
+| Agents | LangGraph (Planner, Analyst, Critic) |
+| Interface | FastAPI & MCP Server |
 | Embeddings | SBERT / OpenAI |
 | Vector DB | ChromaDB |
 | LLM | GPT-4o-mini / Groq |
 | Framework | LangChain |
-| API | FastAPI |
 
 ---
 
@@ -66,6 +73,7 @@ User Query → Embed → ChromaDB → LLM → Risk Assessment
 | CargoNet Reports | PDF/Text | Free (public) |
 | FreightWaves News | Scraped | Free |
 | OpenStreetMap | Structured | Free |
+| Jason's Law (Truck Stops)| Structured | Free |
 
 ---
 
@@ -109,8 +117,8 @@ User Query → Embed → ChromaDB → LLM → Risk Assessment
 |-------|-------|-------------|
 | Data Pipeline | 1-2 | ChromaDB with ingested data |
 | RAG Core | 3-4 | Working API endpoints |
-| Dashboard | 5-6 | Streamlit demo |
-| Polish | 7-8 | Demo-ready product |
+| Agents & MCP | 5-6 | Multi-Agent System & MCP Server |
+| Dashboard | 7-8 | Streamlit demo & Real-time features |
 
 ---
 
@@ -131,7 +139,8 @@ User Query → Embed → ChromaDB → LLM → Risk Assessment
 |-----------|--------|
 | API Skeleton | ✅ Done |
 | Pydantic Schemas | ✅ Done |
-| RAG Module Structure | ✅ Done |
-| ChromaDB Integration | 🔄 In Progress |
-| LangChain Chain | 📋 Planned |
-| Dashboard | 📋 Planned |
+| RAG Module | ✅ Done |
+| ChromaDB Integration | ✅ Done |
+| Multi-Agent System | ✅ Done |
+| MCP Server | ✅ Done |
+| Dashboard | 🔄 In Progress |

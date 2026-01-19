@@ -1,0 +1,539 @@
+{
+    "metadata": {
+        "source": "CargoNet, FBI UCR, FreightWaves Analysis",
+        "last_updated": "2026-01",
+        "description": "High-risk corridors for cargo theft and truck driver safety"
+    },
+    "high_risk_corridors": [
+        {
+            "id": 1,
+            "name": "Memphis Distribution Corridor",
+            "states": [
+                "TN",
+                "AR",
+                "MS"
+            ],
+            "highways": [
+                "I-40",
+                "I-55",
+                "I-240"
+            ],
+            "start_coords": {
+                "lat": 35.1495,
+                "lng": -90.0490
+            },
+            "end_coords": {
+                "lat": 35.0844,
+                "lng": -89.8500
+            },
+            "risk_level": "critical",
+            "risk_score": 9.2,
+            "theft_rate_per_1000": 4.7,
+            "primary_threats": [
+                "cargo_theft",
+                "trailer_theft",
+                "fuel_theft"
+            ],
+            "peak_hours": [
+                22,
+                23,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "recommended_stops_before": [
+                "Pilot #892",
+                "TA #234",
+                "Love's #445"
+            ],
+            "notes": "Highest cargo theft rate in US. Avoid overnight stops within 50 miles."
+        },
+        {
+            "id": 2,
+            "name": "Los Angeles Basin",
+            "states": [
+                "CA"
+            ],
+            "highways": [
+                "I-710",
+                "I-405",
+                "I-5",
+                "I-10"
+            ],
+            "start_coords": {
+                "lat": 33.9425,
+                "lng": -118.2551
+            },
+            "end_coords": {
+                "lat": 34.0522,
+                "lng": -118.2437
+            },
+            "risk_level": "critical",
+            "risk_score": 8.8,
+            "theft_rate_per_1000": 4.2,
+            "primary_threats": [
+                "cargo_theft",
+                "catalytic_converter",
+                "personal_assault"
+            ],
+            "peak_hours": [
+                20,
+                21,
+                22,
+                23,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "recommended_stops_before": [
+                "TA Ontario",
+                "Pilot Fontana",
+                "Love's San Bernardino"
+            ],
+            "notes": "Second highest theft corridor. Port of LA transit area."
+        },
+        {
+            "id": 3,
+            "name": "Dallas-Fort Worth Metroplex",
+            "states": [
+                "TX"
+            ],
+            "highways": [
+                "I-35",
+                "I-20",
+                "I-30",
+                "I-45"
+            ],
+            "start_coords": {
+                "lat": 32.7767,
+                "lng": -96.7970
+            },
+            "end_coords": {
+                "lat": 32.7357,
+                "lng": -97.1081
+            },
+            "risk_level": "high",
+            "risk_score": 7.5,
+            "theft_rate_per_1000": 3.1,
+            "primary_threats": [
+                "cargo_theft",
+                "fuel_theft"
+            ],
+            "peak_hours": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "recommended_stops_before": [
+                "Buc-ee's Terrell",
+                "Pilot Mesquite"
+            ],
+            "notes": "Major distribution hub. High value cargo targets."
+        },
+        {
+            "id": 4,
+            "name": "Chicago Corridor",
+            "states": [
+                "IL",
+                "IN"
+            ],
+            "highways": [
+                "I-80",
+                "I-94",
+                "I-55",
+                "I-90"
+            ],
+            "start_coords": {
+                "lat": 41.8781,
+                "lng": -87.6298
+            },
+            "end_coords": {
+                "lat": 41.6834,
+                "lng": -87.5342
+            },
+            "risk_level": "high",
+            "risk_score": 7.8,
+            "theft_rate_per_1000": 3.4,
+            "primary_threats": [
+                "cargo_theft",
+                "hijacking",
+                "personal_assault"
+            ],
+            "peak_hours": [
+                22,
+                23,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "recommended_stops_before": [
+                "Pilot Joliet",
+                "TA Gary"
+            ],
+            "notes": "Industrial areas high risk. South side extremely dangerous."
+        },
+        {
+            "id": 5,
+            "name": "Atlanta Metro",
+            "states": [
+                "GA"
+            ],
+            "highways": [
+                "I-285",
+                "I-75",
+                "I-85",
+                "I-20"
+            ],
+            "start_coords": {
+                "lat": 33.7490,
+                "lng": -84.3880
+            },
+            "end_coords": {
+                "lat": 33.6407,
+                "lng": -84.4277
+            },
+            "risk_level": "high",
+            "risk_score": 7.2,
+            "theft_rate_per_1000": 2.9,
+            "primary_threats": [
+                "cargo_theft",
+                "trailer_theft"
+            ],
+            "peak_hours": [
+                23,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "recommended_stops_before": [
+                "Pilot McDonough",
+                "Love's Locust Grove"
+            ],
+            "notes": "Major freight hub. Perimeter highway vulnerable."
+        },
+        {
+            "id": 6,
+            "name": "New Jersey Turnpike Corridor",
+            "states": [
+                "NJ",
+                "PA"
+            ],
+            "highways": [
+                "I-95",
+                "NJ Turnpike",
+                "I-78"
+            ],
+            "start_coords": {
+                "lat": 40.7128,
+                "lng": -74.0060
+            },
+            "end_coords": {
+                "lat": 39.9526,
+                "lng": -75.1652
+            },
+            "risk_level": "high",
+            "risk_score": 7.0,
+            "theft_rate_per_1000": 2.7,
+            "primary_threats": [
+                "cargo_theft",
+                "rest_area_theft"
+            ],
+            "peak_hours": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "recommended_stops_before": [
+                "Pilot Linden",
+                "TA Swedesboro"
+            ],
+            "notes": "Port of Newark transit. High value electronics cargo."
+        },
+        {
+            "id": 7,
+            "name": "Miami-Hialeah Corridor",
+            "states": [
+                "FL"
+            ],
+            "highways": [
+                "I-95",
+                "I-75",
+                "Florida Turnpike"
+            ],
+            "start_coords": {
+                "lat": 25.7617,
+                "lng": -80.1918
+            },
+            "end_coords": {
+                "lat": 25.8576,
+                "lng": -80.2781
+            },
+            "risk_level": "moderate",
+            "risk_score": 6.5,
+            "theft_rate_per_1000": 2.3,
+            "primary_threats": [
+                "cargo_theft",
+                "pharmaceutical_theft"
+            ],
+            "peak_hours": [
+                22,
+                23,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "recommended_stops_before": [
+                "Pilot Homestead",
+                "TA Florida City"
+            ],
+            "notes": "Pharmaceutical cargo highly targeted. Organized crime activity."
+        },
+        {
+            "id": 8,
+            "name": "Phoenix-Tucson Corridor",
+            "states": [
+                "AZ"
+            ],
+            "highways": [
+                "I-10",
+                "I-17"
+            ],
+            "start_coords": {
+                "lat": 33.4484,
+                "lng": -112.0740
+            },
+            "end_coords": {
+                "lat": 32.2226,
+                "lng": -110.9747
+            },
+            "risk_level": "moderate",
+            "risk_score": 5.8,
+            "theft_rate_per_1000": 1.8,
+            "primary_threats": [
+                "fuel_theft",
+                "rest_area_theft"
+            ],
+            "peak_hours": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "recommended_stops_before": [
+                "Pilot Marana",
+                "Love's Picacho"
+            ],
+            "notes": "Remote areas. Limited secure parking options."
+        },
+        {
+            "id": 9,
+            "name": "Houston Ship Channel",
+            "states": [
+                "TX"
+            ],
+            "highways": [
+                "I-10",
+                "I-45",
+                "I-610"
+            ],
+            "start_coords": {
+                "lat": 29.7604,
+                "lng": -95.3698
+            },
+            "end_coords": {
+                "lat": 29.7355,
+                "lng": -95.1375
+            },
+            "risk_level": "high",
+            "risk_score": 7.3,
+            "theft_rate_per_1000": 3.0,
+            "primary_threats": [
+                "cargo_theft",
+                "chemical_hazmat"
+            ],
+            "peak_hours": [
+                22,
+                23,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "recommended_stops_before": [
+                "Buc-ee's Baytown",
+                "Pilot Channelview"
+            ],
+            "notes": "Port of Houston transit. Industrial area high risk."
+        },
+        {
+            "id": 10,
+            "name": "St. Louis Gateway",
+            "states": [
+                "MO",
+                "IL"
+            ],
+            "highways": [
+                "I-70",
+                "I-55",
+                "I-64",
+                "I-44"
+            ],
+            "start_coords": {
+                "lat": 38.6270,
+                "lng": -90.1994
+            },
+            "end_coords": {
+                "lat": 38.5884,
+                "lng": -90.3528
+            },
+            "risk_level": "moderate",
+            "risk_score": 6.2,
+            "theft_rate_per_1000": 2.1,
+            "primary_threats": [
+                "cargo_theft",
+                "trailer_theft"
+            ],
+            "peak_hours": [
+                23,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "recommended_stops_before": [
+                "Pilot O'Fallon",
+                "TA Collinsville"
+            ],
+            "notes": "Major freight interchange. East Side higher risk."
+        }
+    ],
+    "theft_hotspots": [
+        {
+            "name": "Memphis",
+            "state": "TN",
+            "lat": 35.1495,
+            "lng": -90.0490,
+            "risk": 9.2
+        },
+        {
+            "name": "Los Angeles",
+            "state": "CA",
+            "lat": 33.9425,
+            "lng": -118.2551,
+            "risk": 8.8
+        },
+        {
+            "name": "Chicago",
+            "state": "IL",
+            "lat": 41.8781,
+            "lng": -87.6298,
+            "risk": 7.8
+        },
+        {
+            "name": "Dallas",
+            "state": "TX",
+            "lat": 32.7767,
+            "lng": -96.7970,
+            "risk": 7.5
+        },
+        {
+            "name": "Houston",
+            "state": "TX",
+            "lat": 29.7604,
+            "lng": -95.3698,
+            "risk": 7.3
+        },
+        {
+            "name": "Atlanta",
+            "state": "GA",
+            "lat": 33.7490,
+            "lng": -84.3880,
+            "risk": 7.2
+        },
+        {
+            "name": "Newark",
+            "state": "NJ",
+            "lat": 40.7357,
+            "lng": -74.1724,
+            "risk": 7.0
+        },
+        {
+            "name": "Miami",
+            "state": "FL",
+            "lat": 25.7617,
+            "lng": -80.1918,
+            "risk": 6.5
+        },
+        {
+            "name": "St. Louis",
+            "state": "MO",
+            "lat": 38.6270,
+            "lng": -90.1994,
+            "risk": 6.2
+        },
+        {
+            "name": "Phoenix",
+            "state": "AZ",
+            "lat": 33.4484,
+            "lng": -112.0740,
+            "risk": 5.8
+        }
+    ],
+    "safe_zone_states": [
+        {
+            "state": "WY",
+            "risk": 1.2,
+            "note": "Very low theft, limited truck stops"
+        },
+        {
+            "state": "VT",
+            "risk": 1.4,
+            "note": "Low population, low crime"
+        },
+        {
+            "state": "ME",
+            "risk": 1.5,
+            "note": "Rural, safe corridors"
+        },
+        {
+            "state": "SD",
+            "risk": 1.6,
+            "note": "Agricultural routes, low risk"
+        },
+        {
+            "state": "ND",
+            "risk": 1.7,
+            "note": "Oil field traffic but low theft"
+        }
+    ]
+}

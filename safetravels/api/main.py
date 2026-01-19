@@ -13,10 +13,10 @@ Endpoints:
 
 Usage:
     Development:
-        uvicorn app.main:app --reload
+        uvicorn safetravels.api.main:app --reload
         
     Production:
-        uvicorn app.main:app --host 0.0.0.0 --port 8000
+        uvicorn safetravels.api.main:app --host 0.0.0.0 --port 8000
 
 Author: SafeTravels Team
 Created: January 2026
@@ -26,8 +26,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Dict
 
-from app.api.routes import router
-from app.config import settings
+from safetravels.api.routes import router
+from safetravels.core.app_settings import settings
 
 
 # =============================================================================

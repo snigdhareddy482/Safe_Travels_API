@@ -1,0 +1,66 @@
+{
+    "metadata": {
+        "source": "CargoNet 2024-2025 Reports",
+        "description": "High-risk compiled from industry reports. These areas have organized cargo theft rings.",
+        "last_updated": "2026-01"
+    },
+    "hotspots": {
+        "CA-Los Angeles": {
+            "risk_score": 10,
+            "notes": "Top cargo theft hotspot in the US. Aggressive organized rings."
+        },
+        "CA-San Bernardino": {
+            "risk_score": 10,
+            "notes": "Major distribution hub, extreme theft risk."
+        },
+        "CA-Riverside": {
+            "risk_score": 9,
+            "notes": "Inland Empire corridor risk."
+        },
+        "TX-Dallas": {
+            "risk_score": 10,
+            "notes": "78% spike in 2024. Critical risk area."
+        },
+        "TX-Tarrant": {
+            "risk_score": 8,
+            "notes": "Fort Worth area, rising incidents."
+        },
+        "TX-Harris": {
+            "risk_score": 9,
+            "notes": "Houston port area traffic."
+        },
+        "IL-Cook": {
+            "risk_score": 9,
+            "notes": "Chicago metro area targeted by rail/truck rings."
+        },
+        "TN-Shelby": {
+            "risk_score": 9,
+            "notes": "Memphis logistics hub, high strategic theft."
+        },
+        "GA-Fulton": {
+            "risk_score": 8,
+            "notes": "Atlanta metro risk."
+        },
+        "FL-Miami-Dade": {
+            "risk_score": 8,
+            "notes": "High value electronics targeting."
+        },
+        "NJ-Middlesex": {
+            "risk_score": 8,
+            "notes": "NJ Turnpike corridor spikes in Q3 2025."
+        },
+        "PA-Philadelphia": {
+            "risk_score": 7,
+            "notes": "Rising destination for stolen goods."
+        }
+    },
+    "state_risk_multipliers": {
+        "CA": 1.5,
+        "TX": 1.4,
+        "IL": 1.3,
+        "FL": 1.2,
+        "GA": 1.2,
+        "TN": 1.2,
+        "NJ": 1.2
+    }
+}

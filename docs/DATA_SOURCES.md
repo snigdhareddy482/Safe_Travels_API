@@ -144,13 +144,32 @@ out body;
 
 ---
 
+---
+
+## 📅 Internal / Static Data Sources
+
+### 10. High Risk Corridors
+**What:** Defined geolocation paths of known high-risk highway segments.
+**File:** `data/high_risk_corridors.json`
+
+### 11. HOS (Hours of Service) Regulations
+**What:** Federal rules for driver driving limits and break requirements.
+**File:** `data/hos_regulations.json`
+
+### 12. US Holidays
+**What:** Calendar of major holidays for temporal risk adjustment.
+**File:** `data/us_holidays.json`
+
+---
+
 ## 📋 Data Usage Summary
 
 | Data Source | Status | Documents Created |
 |-------------|--------|-------------------|
 | FBI Crime Data | ✅ Loaded | 50 states, 25 counties, 3 analysis docs |
 | DOT Truck Stops | ✅ Loaded | 40 truck stops with GPS + security |
-| OpenStreetMap | 🔄 Pending | - |
+| OpenStreetMap | ✅ Loaded | 2,500+ service locations (`osm_truck_stops.json`) |
+| High Risk Corridors | ✅ Loaded | Major interstates (I-10, I-40, I-80) |
 | NHTSA FARS | 🔄 Pending | - |
 | FMCSA Carrier | 🔄 Pending | - |
 

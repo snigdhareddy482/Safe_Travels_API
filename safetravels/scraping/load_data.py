@@ -11,7 +11,7 @@ Data Sources:
     - DOT Truck Stop Parking: Truck stop locations with GPS coordinates
 
 Usage:
-    python scripts/load_data.py
+    python -m safetravels.scraping.load_data
 
 Author: SafeTravels Team
 Created: January 2026
@@ -24,10 +24,10 @@ import logging
 from typing import Dict, List, Any, Optional
 from pathlib import Path
 
-# Add parent directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent))
+# Add project root to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from app.rag.vector_store import get_vector_store
+from safetravels.rag.vector_store import get_vector_store
 
 # =============================================================================
 # CONFIGURATION

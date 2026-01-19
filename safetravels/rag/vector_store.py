@@ -13,7 +13,7 @@ The VectorStore class manages document storage and semantic search for:
     - Analysis documents (time patterns, commodities, methods)
 
 Usage:
-    from app.rag.vector_store import get_vector_store
+    from safetravels.rag.vector_store import get_vector_store
     
     store = get_vector_store()
     results = store.query("Texas cargo theft I-35")
@@ -27,7 +27,7 @@ from chromadb.config import Settings
 from typing import List, Dict, Optional, Any
 import logging
 from pathlib import Path
-from app.config import settings
+from safetravels.core.app_settings import settings
 
 # =============================================================================
 # LOGGING CONFIGURATION
