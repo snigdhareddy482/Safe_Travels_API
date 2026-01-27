@@ -31,13 +31,6 @@ env/
 *.db
 *.sqlite
 
-# ML Models (large files)
-ml/models/*.pkl
-ml/models/*.joblib
-
-# ChromaDB
-chroma_db/
-
 # Logs
 *.log
 logs/
@@ -50,6 +43,9 @@ Thumbs.db
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Backup folder (old codebase)
+backup/
 
 # Personal folders
 snigdha/
