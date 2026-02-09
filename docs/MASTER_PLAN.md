@@ -2,7 +2,7 @@
 
 > **AI-Powered Route Safety Analysis**
 
-**Author:** Snigdha  
+**Author:** Snigdha/ Andrew
 **Version:** 2.0 | January 2026
 
 ---

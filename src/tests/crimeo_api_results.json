@@ -1,0 +1,67 @@
+{
+  "test_metadata": {
+    "timestamp": "2026-02-09T17:50:54.536024+00:00",
+    "api_key_prefix": "k3RAzKN1",
+    "base_url": "https://api.crimeometer.com/v1",
+    "test_location": {
+      "latitude": 41.8781,
+      "longitude": -87.6298,
+      "description": "Downtown Chicago"
+    },
+    "date_range": {
+      "datetime_ini": "2025-08-13T00:00:00.000Z",
+      "datetime_end": "2026-02-09T00:00:00.000Z"
+    }
+  },
+  "tests": [
+    {
+      "test_name": "date_range_helper",
+      "status": "pass",
+      "datetime_end": "2026-02-09T00:00:00.000Z",
+      "datetime_ini": "2025-08-13T00:00:00.000Z",
+      "days_between": 180
+    },
+    {
+      "test_name": "coverage",
+      "endpoint": "/v1/incidents/raw-data-coverage",
+      "status_code": 429,
+      "status": "rate_limited",
+      "response": {
+        "message": "Limit Exceeded"
+      }
+    },
+    {
+      "test_name": "stats",
+      "endpoint": "/v1/incidents/stats",
+      "status_code": 429,
+      "status": "rate_limited",
+      "params": {
+        "lat": 41.8781,
+        "lon": -87.6298,
+        "distance": "1mi",
+        "datetime_ini": "2025-08-13T00:00:00.000Z",
+        "datetime_end": "2026-02-09T00:00:00.000Z"
+      },
+      "response": {
+        "message": "Limit Exceeded"
+      }
+    },
+    {
+      "test_name": "raw_data",
+      "endpoint": "/v1/incidents/raw-data",
+      "status_code": 429,
+      "status": "rate_limited",
+      "params": {
+        "lat": 41.8781,
+        "lon": -87.6298,
+        "distance": "1mi",
+        "datetime_ini": "2025-08-13T00:00:00.000Z",
+        "datetime_end": "2026-02-09T00:00:00.000Z",
+        "page": 1
+      },
+      "response": {
+        "message": "Limit Exceeded"
+      }
+    }
+  ]
+}
